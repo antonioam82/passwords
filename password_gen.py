@@ -5,7 +5,7 @@ while True:
     print("¿Que desea generar?")
     print("A)CONTRASEÑA SEGURA")
     print("B)URL SEGURA")
-    opci=opt(input("Introduzca aquí su opción: "),["A","B"])
+    opci=opt(input("Introduzca aquí su opción: "),["A","B"])#ESCRIBIR SOLO "A" o "B". 
 
     if opci==("A"):
         import random
