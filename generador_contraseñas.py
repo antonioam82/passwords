@@ -1,7 +1,23 @@
 import subprocess
-from VALID import ns, OKI, opt
 import random
 import string
+
+def ns(r):
+    while r!="n" and r!="s":
+        r=input("Escriba solo \'n\' o \'s\' según su opción: ")
+    return r
+
+def OKI(n):
+    try:
+        n=int(n)
+    except:
+        n=OKI(input("Caracter no valido: "))
+    return n
+
+def opt(o,l):
+    while o not in l:
+        o=input("Escriba solo una de las opciónes posibles: ")
+    return o
 
 while True:
     print("*******GENERADOR DE CONTRASEÑAS*******")
