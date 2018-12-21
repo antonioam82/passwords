@@ -1,6 +1,6 @@
-import subprocess
 import random
 import string
+import sys
 
 def ns(r):
     while r!="n" and r!="s":
@@ -18,6 +18,8 @@ def opt(o,l):
     while o not in l:
         o=input("Escriba solo una de las opciónes posibles: ")
     return o
+
+ops=sys.platform
 
 while True:
     print("*******GENERADOR DE CONTRASEÑAS*******")
@@ -42,7 +44,11 @@ while True:
     conti=ns(input("¿Desea continuar?: "))
     if conti==("n"):
         break
-    try:
-        subprocess.call(["cmd.exe","/C","cls"])
-    except:
+    if ops=="win32" or ops=="linux2":
+        if ops=="win32":
+            import subprocess
+            subprocess.call(["cmd.exe","/C","cls"])
+        else:
+            os.system("clear")
+    else:
         continue
