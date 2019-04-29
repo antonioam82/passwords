@@ -1,6 +1,8 @@
 import random
 import string
 import sys
+import time
+import subprocess
 
 def ns(r):
     while r!="n" and r!="s":
@@ -20,8 +22,9 @@ def opt(o,l):
     return o
 
 ops=sys.platform
-
+start_time=time.time()
 while True:
+    
     print("*******GENERADOR DE CONTRASEÑAS*******")
     minus=OKI(input("Indique número mínimo de minusculas: "))
     mayus=OKI(input("Indique número mínimo de mayusculas: "))
@@ -41,6 +44,8 @@ while True:
     print("SU CONTRASEÑA: ",contraseña)
     print("")
     
+    
+    
     conti=ns(input("¿Desea continuar?: "))
     if conti==("n"):
         break
@@ -52,3 +57,5 @@ while True:
             os.system("clear")
     else:
         continue
+end_time=time.time()
+print("Runtime for this program was {} seconds.".format(end_time-start_time))
