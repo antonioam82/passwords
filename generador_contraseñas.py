@@ -23,7 +23,6 @@ def opt(o,l):
 ops=sys.platform
 
 while True:
-    
     print("*******GENERADOR DE CONTRASEÑAS*******")
     minus=OKI(input("Indique número mínimo de minusculas: "))
     mayus=OKI(input("Indique número mínimo de mayusculas: "))
