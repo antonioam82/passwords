@@ -24,7 +24,6 @@ def opt(o,l):
 ops=sys.platform
 start_time=time.time()
 while True:
-    
     print("*******GENERADOR DE CONTRASEÑAS*******")
     minus=OKI(input("Indique número mínimo de minusculas: "))
     mayus=OKI(input("Indique número mínimo de mayusculas: "))
@@ -44,9 +43,7 @@ while True:
     print("SU CONTRASEÑA: ",contraseña)
     print("")
     
-    
-    
-    conti=ns(input("¿Desea continuar?: "))
+    conti=ns(input("¿Desea continuar?(s/n): "))
     if conti==("n"):
         break
     if ops=="win32" or ops=="linux2":
@@ -57,5 +54,3 @@ while True:
             os.system("clear")
     else:
         continue
-end_time=time.time()
-print("Runtime for this program was {} seconds.".format(end_time-start_time))
