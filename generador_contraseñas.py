@@ -1,7 +1,6 @@
 import random
 import string
 import sys
-import time
 import subprocess
 
 def ns(r):
@@ -22,8 +21,9 @@ def opt(o,l):
     return o
 
 ops=sys.platform
-start_time=time.time()
+
 while True:
+    
     print("*******GENERADOR DE CONTRASEÑAS*******")
     minus=OKI(input("Indique número mínimo de minusculas: "))
     mayus=OKI(input("Indique número mínimo de mayusculas: "))
@@ -34,13 +34,13 @@ while True:
         longitud=OKI(input("Longitud inadecuada: "))
     caract=string.ascii_letters+string.digits
     while True:
-        contraseña=("").join(random.choice(caract)for i in range(longitud))
-        if(sum(c.islower() for c in contraseña)>=minus
-            and sum(c.isupper() for c in contraseña)>=mayus
-            and sum(c.isdigit() for c in contraseña)>=numeros):
+        contra=("").join(random.choice(caract)for i in range(longitud))
+        if(sum(c.islower() for c in contra)>=minus
+            and sum(c.isupper() for c in contra)>=mayus
+            and sum(c.isdigit() for c in contra)>=numeros):
             break
     print("")
-    print("SU CONTRASEÑA: ",contraseña)
+    print("SU CONTRASEÑA: ",contra)
     print("")
     
     conti=ns(input("¿Desea continuar?(s/n): "))
