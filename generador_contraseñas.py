@@ -38,11 +38,10 @@ while True:
             and sum(c.isupper() for c in contra)>=mayus
             and sum(c.isdigit() for c in contra)>=numeros):
             break
-    print("")
-    print("SU CONTRASEÑA: ",contra)
-    print("")
+        
+    print("\nSU CONTRASEÑA: ",contra)
     
-    conti=ns(input("¿Desea continuar?(s/n): "))
+    conti=ns(input("\n¿Desea continuar?(s/n): "))
     if conti==("n"):
         break
     if ops=="win32" or ops=="linux2":
